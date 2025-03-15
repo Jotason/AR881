@@ -122,6 +122,52 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &68968229
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 68968231}
+  - component: {fileID: 68968230}
+  m_Layer: 0
+  m_Name: UIManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &68968230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 68968229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 557a44853945239488a44f37db4cf06e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainMenuPanel: {fileID: 1046322198}
+  inventoryMenuPanel: {fileID: 2045346813}
+--- !u!4 &68968231
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 68968229}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &203846948
 GameObject:
   m_ObjectHideFlags: 0
@@ -880,7 +926,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 2111364647}
   m_Direction: 0
   m_Value: 0
-  m_Size: 0.38320297
+  m_Size: 0.38315234
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -1767,7 +1813,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1749745796}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 68968230}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_MethodName: OnInventoryMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1749745796
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1969,8 +2027,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4966719baa26e4b0e8231a24d9bd491a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_FocusMode: 1
-  m_LightEstimationMode: 0
+  m_FocusMode: -1
+  m_LightEstimationMode: -1
   m_AutoFocus: 1
   m_LightEstimation: 0
   m_FacingDirection: 1
@@ -2178,7 +2236,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2022255857}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 68968230}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_MethodName: OnMainMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2022255857
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2228,6 +2298,7 @@ GameObject:
   - component: {fileID: 2045346814}
   - component: {fileID: 2045346816}
   - component: {fileID: 2045346815}
+  - component: {fileID: 2045346817}
   m_Layer: 5
   m_Name: InventoryMenuPanel
   m_TagString: Untagged
@@ -2294,6 +2365,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2045346813}
   m_CullTransparentMesh: 1
+--- !u!114 &2045346817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2045346813}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a82aaee5699b065428329eccdc637a2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Cards:
+  - {fileID: 11400000, guid: 4e608ddcfeae7094aa518f458dffceb5, type: 2}
+  - {fileID: 11400000, guid: 48ec2e48c20f38c4cb66a11a75b3f5ce, type: 2}
+  - {fileID: 11400000, guid: 538a4a6f8f389a2439a36b30abbdf117, type: 2}
+  - {fileID: 11400000, guid: 67f8b773eed3217498874a30b0f5fdc2, type: 2}
+  - {fileID: 11400000, guid: eca3c558abdd20b428985a4de81187ab, type: 2}
+  standardCardPrefab: {fileID: 7736637664148920562, guid: 8c4d5ab4a3bebca43b525d655787e742,
+    type: 3}
+  parentCard: {fileID: 1971674520}
 --- !u!1 &2111364646
 GameObject:
   m_ObjectHideFlags: 0
@@ -2500,3 +2592,4 @@ SceneRoots:
   - {fileID: 371153375}
   - {fileID: 203846952}
   - {fileID: 1183380450}
+  - {fileID: 68968231}
