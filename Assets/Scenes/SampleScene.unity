@@ -132,6 +132,7 @@ GameObject:
   m_Component:
   - component: {fileID: 68968231}
   - component: {fileID: 68968230}
+  - component: {fileID: 68968232}
   m_Layer: 0
   m_Name: UIManager
   m_TagString: Untagged
@@ -168,6 +169,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &68968232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 68968229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6366467d8cec5314b824bcfe5951055a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nameFile: 
+  initialPath: 
+  destinationPath: 
 --- !u!1 &203846948
 GameObject:
   m_ObjectHideFlags: 0
@@ -1050,8 +1066,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 218573412}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 0.056666672}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1110,7 +1126,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1046322199
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1431,9 +1447,9 @@ RectTransform:
   m_Father: {fileID: 1371773705}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: -17}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1318552817
 MonoBehaviour:
@@ -2305,7 +2321,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2045346814
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2379,10 +2395,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Cards:
   - {fileID: 11400000, guid: 4e608ddcfeae7094aa518f458dffceb5, type: 2}
-  - {fileID: 11400000, guid: 48ec2e48c20f38c4cb66a11a75b3f5ce, type: 2}
-  - {fileID: 11400000, guid: 538a4a6f8f389a2439a36b30abbdf117, type: 2}
-  - {fileID: 11400000, guid: 67f8b773eed3217498874a30b0f5fdc2, type: 2}
-  - {fileID: 11400000, guid: eca3c558abdd20b428985a4de81187ab, type: 2}
+  - {fileID: 11400000, guid: b09c9030705806b4eb561cf9fd5a9e1a, type: 2}
+  - {fileID: 11400000, guid: c08ddeb0439fa064d9d835d1f6388bc2, type: 2}
+  - {fileID: 11400000, guid: eadcd4893c2c64f42a5d799e4dc5cd43, type: 2}
+  - {fileID: 11400000, guid: 89988053272c7c24c99cf30602d0f52b, type: 2}
   standardCardPrefab: {fileID: 7736637664148920562, guid: 8c4d5ab4a3bebca43b525d655787e742,
     type: 3}
   parentCard: {fileID: 1971674520}
@@ -2419,7 +2435,7 @@ RectTransform:
   m_Father: {fileID: 455118201}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0.38315234, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -2543,7 +2559,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2115119054}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 68968232}
+        m_TargetAssemblyTypeName: TakePicture, Assembly-CSharp
+        m_MethodName: TakeScreenshot
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2115119054
 MonoBehaviour:
   m_ObjectHideFlags: 0

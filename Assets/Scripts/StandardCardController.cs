@@ -20,4 +20,9 @@ public class StandardCardController : MonoBehaviour
         description.text = scriptableCard.description;  
 
     }
+
+    public void InstantiateObject() {
+        GameObject _objTemp = Instantiate(obj3D);
+        _objTemp.transform.Translate(transform.forward * 0.15f);
+    }
 }

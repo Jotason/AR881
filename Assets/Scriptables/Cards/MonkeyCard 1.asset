@@ -16,4 +16,4 @@ MonoBehaviour:
   nameCard: Monkey
   description: 'Mico transformado en silla '
   previewImage: {fileID: 21300000, guid: a28a5a013c86d9247bc40662a87520f4, type: 3}
-  obj3D: {fileID: 9183664571158636795, guid: 412e628f9c442ac448b5cb5944ffd2d3, type: 3}
+  obj3D: {fileID: 7086012650535509705, guid: 22512d9673c0491469f1494d8f594ffb, type: 3}
