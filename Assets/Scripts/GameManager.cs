@@ -4,9 +4,9 @@ using UnityEngine;
 using TMPro;
 using System;
 
-public class UIManager : MonoBehaviour
+public class GameManager : MonoBehaviour
 {
-    public static UIManager instance;
+    public static GameManager instance;
 
     public event Action onMainMenu;
     public event Action onInventoryMenu;
@@ -14,7 +14,6 @@ public class UIManager : MonoBehaviour
     public GameObject mainMenuPanel;
     public GameObject inventoryMenuPanel;
 
-    
 
 
     private void Awake()
@@ -30,8 +29,7 @@ public class UIManager : MonoBehaviour
     }
     void Start()
     {
-        GameManager.instance.onMainMenu+= OnMainMenu;
-        GameManager.instance.onInventoryMenu += OnInventoryMenu;
+       OnMainMenu();
     }
 
     // Update is called once per frame
@@ -42,14 +40,16 @@ public class UIManager : MonoBehaviour
 
     public void OnMainMenu()
     {
-        mainMenuPanel.SetActive(true);
-        inventoryMenuPanel.SetActive(false);
+        onMainMenu?.Invoke();
     }
 
     public void OnInventoryMenu()
     {
-        inventoryMenuPanel.SetActive(true);
-        mainMenuPanel.SetActive(false);
+        onInventoryMenu?.Invoke();
 
+    }
+
+    public void CloseApplication() { 
+    Application.Quit();
     }
 }
