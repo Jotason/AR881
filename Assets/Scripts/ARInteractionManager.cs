@@ -19,9 +19,11 @@ public class ARInteractionManager : MonoBehaviour
     {
         set
         {
+            GameManager.instance.DebugConsoleMessage("Se asigna el modelo 3D");
             _item3Dmodel = value;
             _item3Dmodel.transform.position = _arPointer.transform.position;
-            _item3Dmodel.transform.rotation = _arPointer.transform.rotation;    
+            //_item3Dmodel.transform.rotation = _arPointer.transform.rotation;    
+            _isInitialPosition = true;
         }
         get { return _item3Dmodel; }
     }
@@ -29,6 +31,7 @@ public class ARInteractionManager : MonoBehaviour
     {
         _arPointer = transform.GetChild(0).gameObject;
         _arRaycastManager = GameObject.FindObjectOfType<ARRaycastManager>();
+        
     }
 
     // Update is called once per frame
@@ -43,7 +46,7 @@ public class ARInteractionManager : MonoBehaviour
                 transform.position = _hits[0].pose.position;
                 transform.rotation = _hits[0].pose.rotation;
                 _arPointer.SetActive(true);
-                _isInitialPosition = false;
+                //_isInitialPosition = false;
             }
         }
     }
@@ -56,4 +59,7 @@ public class ARInteractionManager : MonoBehaviour
             _item3Dmodel = null; 
         }
     }
+
+
+    
 }

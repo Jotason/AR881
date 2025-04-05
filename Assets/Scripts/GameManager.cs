@@ -8,6 +8,8 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
 
+    public TextMeshProUGUI debugText;
+
     public event Action onMainMenu;
     public event Action onInventoryMenu;
 
@@ -51,5 +53,9 @@ public class GameManager : MonoBehaviour
 
     public void CloseApplication() { 
     Application.Quit();
+    }
+
+    public void DebugConsoleMessage(string message) { 
+        debugText.text = message;
     }
 }

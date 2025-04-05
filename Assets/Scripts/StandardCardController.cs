@@ -12,17 +12,28 @@ public class StandardCardController : MonoBehaviour
     [HideInInspector] public ScriptableCard scriptableCard;
 
     [HideInInspector] public GameObject obj3D;
-    public void LoadData() { 
-    
+
+    private ARInteractionManager _interactionManager;
+
+
+    private void Start()
+    {
+        _interactionManager = FindObjectOfType<ARInteractionManager>();
+    }
+    public void LoadData()
+    {
+
         titleText.text = scriptableCard.nameCard;
         previewImage.sprite = scriptableCard.previewImage;
         obj3D = scriptableCard.obj3D;
-        description.text = scriptableCard.description;  
+        description.text = scriptableCard.description;
 
     }
 
-    public void InstantiateObject() {
+    public void InstantiateObject()
+    {
         GameObject _objTemp = Instantiate(obj3D);
-        _objTemp.transform.Translate(transform.forward * 0.15f);
+        //_objTemp.transform.Translate(transform.forward * 0.15f);
+        _interactionManager._Item3DModel = _objTemp;
     }
 }
