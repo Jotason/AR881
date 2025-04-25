@@ -10,9 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e0905cdad2c75cb4e8df52568aecba26, type: 3}
-  m_Name: New Item
+  m_Name: Greek
   m_EditorClassIdentifier: 
-  itemName: 
-  itemImage: {fileID: 0}
-  itemDescription: 
-  item3DModel: {fileID: 0}
+  itemName: Greek
+  itemImage: {fileID: 21300000, guid: 322013cc7b1d2ca48971bad1435235b1, type: 3}
+  itemDescription: Column
+  item3DModel: {fileID: 6402646228230161330, guid: 802a372de2fe6c94ead48afe2c9984f4,
+    type: 3}
