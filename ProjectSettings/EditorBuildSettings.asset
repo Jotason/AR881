@@ -13,3 +13,5 @@ EditorBuildSettings:
       type: 2}
     com.unity.xr.arfoundation.simulation_settings: {fileID: 11400000, guid: 855806ebb9f40f84da6d858615e39ccf,
       type: 2}
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: a20e0810fabb044449f08dd82b2dc54f,
+      type: 2}
