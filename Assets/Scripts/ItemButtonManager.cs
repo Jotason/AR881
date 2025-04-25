@@ -11,6 +11,7 @@ public class ItemButtonManager : MonoBehaviour
     private string itemDescription;
     private Sprite itemImage;
     private GameObject item3DModel;
+    private ARInteractionManager interactionManager;
 
     public string ItemName { get => itemName; set => itemName = value; }
     public string ItemDescription { get => itemDescription; set => itemDescription = value; }
@@ -26,11 +27,13 @@ public class ItemButtonManager : MonoBehaviour
         var button = GetComponent<Button>();
         button.onClick.AddListener(GameManager.instance.ARPosition);
         button.onClick.AddListener(Create3DModel);
+
+        interactionManager = FindObjectOfType<ARInteractionManager>();
     }
 
     private void Create3DModel()
     {
-        Instantiate(item3DModel);
+        interactionManager.Item3DModel = Instantiate(item3DModel);
     }
 
 }
