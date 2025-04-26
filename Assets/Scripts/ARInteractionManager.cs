@@ -125,6 +125,7 @@ public class ARInteractionManager : MonoBehaviour
         return false;
     }
 
+    // Jeison David Ortiz Yate
     private bool isTapOverUI(Vector2 touchPosition)
     {
         PointerEventData eventData = new PointerEventData(EventSystem.current);

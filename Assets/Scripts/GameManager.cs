@@ -33,6 +33,7 @@ public class GameManager : MonoBehaviour
 
     }
 
+    // Jeison David Ortiz Yate
     public void ItemsMenu()
     {
         OnItemsMenu?.Invoke();

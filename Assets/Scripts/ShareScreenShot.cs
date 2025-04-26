@@ -32,7 +32,7 @@ public class ShareScreenShot : MonoBehaviour
         mainMenuCanvas.SetActive(!mainMenuCanvas.activeSelf);
 
     }
-
+    // Jeison David Ortiz Yate
     private IEnumerator TakeScreenshotAndShare()
     {
         yield return new WaitForEndOfFrame();
