@@ -951,7 +951,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 612880.5, y: 17772.709}
+  m_AnchoredPosition: {x: 938274, y: 28382.572}
   m_SizeDelta: {x: 0, y: 440}
   m_Pivot: {x: 1, y: 0}
 --- !u!114 &439569533
@@ -1596,8 +1596,8 @@ GameObject:
   - component: {fileID: 1160106601}
   - component: {fileID: 1160106600}
   - component: {fileID: 1160106602}
-  - component: {fileID: 1160106603}
   - component: {fileID: 1160106604}
+  - component: {fileID: 1160106603}
   m_Layer: 0
   m_Name: XR Origin
   m_TagString: Untagged
